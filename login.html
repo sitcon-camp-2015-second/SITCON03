@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title></title>
 <script src="./jquery-2.1.4.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 function logout(){FB.logout(function(response){response.authResponse.accessToken});
 setTimeout(function(){
 	FB.getLoginStatus(function(response){
-		if (response.status !== 'connected'){window.location = './index.html'}});},4000);}
+		if (response.status !== 'connected'){window.location = './index.html'}});},2000);}
 </script>
 <script type="text/javascript">
 function api(){FB.api("/me",function (response){if (response && !response.error){
