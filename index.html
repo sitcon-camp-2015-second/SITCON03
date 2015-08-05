@@ -5,7 +5,7 @@
 </head>
 <body>
 <script src="./fbapi.js" type="text/javascript"></script>
-<fb:login-button scope="posts" onlogin="checkLoginState();FB.getLoginStatus(function(response){if (response.status === 'connected') { window.location = './login.html' };});">
+<fb:login-button scope="public_profile,user_posts" onlogin="checkLoginState();FB.getLoginStatus(function(response){if (response.status === 'connected') { window.location = './login.html' };});">
 </fb:login-button>
 <div id="status"></div>
 </body>
