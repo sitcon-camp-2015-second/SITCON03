@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+		<script src="../Chart.js"></script>
+	</head>
+	<body>
+		<div style="width:30%">
+			<div>
+				<canvas id="canvas" height="450" width="600"></canvas>
+			</div>
+		</div>
+
+
+	<script>
+		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+		var lineChartData = {
+			labels : ["00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00",],
+			datasets : [
+				{
+					label: "average likes",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(59,89,152,0.5)",
+					pointColor : "rgba(59,89,152,1)",
+					pointStrokeColor : "rgba(59,89,152,0.7)",
+					pointHighlightFill : "rgba(59,89,152,0.2)",
+					pointHighlightStroke : "rgba(59,89,152,0.2)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					label: "Post Count",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(33, 177, 195, 0.5)",
+					pointColor : "rgba(33, 177, 195, 1)",
+					pointStrokeColor : "rgba(33, 177, 195, 0.7)",
+					pointHighlightFill : "rgba(33, 177, 195, 0.7)",
+					pointHighlightStroke : "rgba(33, 177, 195, 0.7)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+
+		}
+
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+	}
+
+
+	</script>
+	</body>
+</html>
