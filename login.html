@@ -7,18 +7,18 @@ function logout(){FB.logout(function(response){response.authResponse.accessToken
 setTimeout(function(){
 	FB.getLoginStatus(function(response){
 		if (response.status !== 'connected'){window.location = './index.html'}});},4000);}
-FB.api(
-    "/me",
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-      }
-    }
-);
 </script>
 </head>
 <body>
 <script src="./fbapi.js" type="text/javascript"></script>
+<script type="text/javascript">
+FB.api(
+	"/me",
+	function (response){
+	if (response && !response.error){
+	
+	}});
+</script>
 <input type="button" onclick="logout()" value="Logout"></input>
 </body>
 </html>
