@@ -5,29 +5,33 @@
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
+	<div style="width:30%">
 	<div>
-		<canvas id="canvas" height="450" width="600"></canvas>
+		<canvas id="canvas"></canvas>
 	</div>
+</div>
 	<script>
-	var cdata=[2,3,4,5,6,7,8]
+	var likehr=[2,3,4,5,6,7,8];
+	//var posthr=[5,5,6,7,5,3,2];
 	var lineChartData = 
 	{
-		labels : ["January","February","March","April","May","June","July"],
+		labels : ["00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"],
 		datasets : [
 			{
-				label: "My First dataset",
+				label: "average likes",
 				fillColor : "rgba(220,220,220,0.2)",
-				strokeColor : "rgba(220,220,220,1)",
-				pointColor : "rgba(220,220,220,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(220,220,220,1)",
+				strokeColor : "rgba(59,89,152,0.5)",
+				pointColor : "rgba(59,89,152,1)",
+				pointStrokeColor : "rgba(59,89,152,0.7)",
+				pointHighlightFill : "rgba(59,89,152,0.2)",
+				pointHighlightStroke : "rgba(59,89,152,0.2)",
 				data : []
 			}
-		]
+			]
 	}
 
-			lineChartData.datasets[0].data=cdata;
+			lineChartData.datasets[0].data=likehr;
+			//lineChartData.datasets[1].data=posthr;
 			window.onload = function(){
 		var ctx = document.getElementById("canvas").getContext("2d");
 		window.myLine = new Chart(ctx).Line(lineChartData, {
