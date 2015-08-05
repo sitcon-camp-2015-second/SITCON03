@@ -12,12 +12,8 @@ setTimeout(function(){
 <body>
 <script src="./fbapi.js" type="text/javascript"></script>
 <script type="text/javascript">
-FB.api(
-	"/me",
-	function (response){
-	if (response && !response.error){
-	
-	}});
+FB.api("/me",function (response){if (response && !response.error){
+}});
 </script>
 <input type="button" onclick="logout()" value="Logout"></input>
 </body>
