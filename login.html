@@ -11,7 +11,7 @@ setTimeout(function(){
 			window.location = './index.html'}});},2000);}
 function checkstatus(){
 setTimeout(function(){
-	i$('body').append('<img src="Processing.gif"></img>');
+	$('body').append('<img src="Processing.gif"></img>');
         FB.getLoginStatus(function(response){
                 if (response.status !== 'connected'){
                 	
