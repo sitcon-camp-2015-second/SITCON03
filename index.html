@@ -49,13 +49,15 @@
 	   <a class="waves-effect waves-light btn"><i class="material-icons right"></i>Camp</a> 
 
        <div class="container">
+      <div class="row">
+      <div class="col s12 center">
     <div class="section">
 	<h3>Please login to continue</h3>
       <canvas id="canvas"></canvas>
       <fb:login-button data-size="xlarge" scope="public_profile,user_posts" onlogin="checkLoginState();FB.getLoginStatus(function(response){if (response.status === 'connected') { window.location = './login.html' };});"><div id="status"></div>
 
-      <div class="row">
-        <div class="col s12 center">
+      <!--<div class="row">
+        <div class="col s12 center">-->
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Login</h4>
           <p class="left-align light"></p>
@@ -74,14 +76,8 @@
         <div class="col l3 s12">
           <h5 class="white-text">參與人員</h5>
           <ul>
-            <li><a class="white-text">米期</a></li>
-            <li><a class="white-text">林先彥</a></li>
-            <li><a class="white-text">陳彥霖</a></li>
-            <li><a class="white-text">吳宇軒</a></li>
-            <li><a class="white-text">林效鴻</a></li>
-            <li><a class="white-text">林致廷</a></li>
-            <li><a class="white-text">彭琍棱</a></li>
-            <li><a class="white-text">隋昀華</a></li>
+            <li><a class="white-text">子期&nbsp;小米&nbsp;林先彥&nbsp;陳彥霖&nbsp;</li>
+            <li><a class="white-text">吳宇軒&nbsp;林效鴻&nbsp;林致廷&nbsp;彭琍棱&nbsp;隋昀華</a></li>
           </ul>
         </div>
       </div>
