@@ -11,10 +11,13 @@ setTimeout(function(){
 			window.location = './index.html'}});},2000);}
 function checkstatus(){
 setTimeout(function(){
+	$(window).load(function() {
+     $('#loading').hide();
+  });
         FB.getLoginStatus(function(response){
                 if (response.status !== 'connected'){
                 	$(window).load(function() {
-     $('#loading').hide();
+     $('#loading').show();
   });
                 	window.location = './index.html';}});},2000);}
 
