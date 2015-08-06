@@ -1,7 +1,7 @@
 (function(w, $, f){
   var facebook = function($, f) {
     this.hello = "Welcome to SITCON Summer Camp!"
-    var accessToken = "CAACWMFh6DXgBAHguwIHB3EAmVO1QgYaA3q0llZBqfe0t0DEAcwWTTbTUdF4DzaWPlRHhIXQaY8zpmVXjWDIKVortTbjYwsFSOXOHI72rfs9YyzvdPnT5xmhFBK3waqix1gtO3jxmR6UbNiX6rqFRUVIForGvWdbwOntAOO0Gp90wvZCvUi5rPPGyrPkFeynsZAb0F7Nki5LoUHakEEJ"
+    var accessToken = "CAACEdEose0cBAMbKjVSjR3KtLpRhtzCrsnZAs13USeMum1qlOXNoZCskDVcggykebeik7pzf6dbjOoBo5ZBJCrZBfDijcKpB3SXvKc9h0woOcLUs6ZA56fV1EseZAYUXsZC8nU0K4mvJgwQisGCCBxhD1SXO78NQ2ZBXMKDJ6Uy0xpUaUFAy7k72azDRoMpaCM6aFoEJbESlb8PqmUOUJSMuJuAPWINkIXqetu7LLDi4WAZDZD"
     var fansPage = f
     var basicInfo = {}
     this.getAccessToken = function() {
@@ -12,6 +12,17 @@
     }
     this.api = function(path, callback) {
       $.get("https://graph.facebook.com/"+path+"?access_token="+accessToken, function (data){
+        callback && callback(data)
+      })
+    }
+    this.apin = function(path, obj, new_accessToken, callback) {
+      var variables = '';
+      accessToken = new_accessToken
+      for(var key in obj) {
+        variables += '&'+ key +'='+ obj[key];
+      }
+
+      $.get("https://graph.facebook.com/"+path+"?access_token="+accessToken + variables, function (data){
         callback && callback(data)
       })
     }
@@ -44,9 +55,6 @@
     }
     this.whoAmI = function(callback) {
       this.api("/me", callback)
-    }
-
-
     }
   }
   w.FB = new facebook($, f)
