@@ -66,7 +66,7 @@
         pointStrokeColor : "rgba(59,89,152,0.7)",
         pointHighlightFill : "rgba(59,89,152,0.2)",
         pointHighlightStroke : "rgba(59,89,152,0.2)",
-        data : []
+        data : [22,26,14,14,26,18,37,14,36,54,46,42,62,54,48,64,86,73,93,103,76,57,79,47]
       },
       {
         label: "Post Count",
@@ -76,13 +76,13 @@
         pointStrokeColor : "rgba(33, 177, 195, 0.7)",
         pointHighlightFill : "rgba(33, 177, 195, 0.7)",
         pointHighlightStroke : "rgba(33, 177, 195, 0.7)",
-        data : []
+        data : [2,1,1,0,1,2,4,3,1,5,6,2,3,2,1,6,4,3,5,2,4,2,2,3]
         }
       ]
   }
 
-      lineChartData.datasets[0].data=likehr;
-      lineChartData.datasets[1].data=posthr;
+      //lineChartData.datasets[0].data=likehr;
+      //lineChartData.datasets[1].data=posthr;
       window.onload = function(){
     var ctx = document.getElementById("canvas").getContext("2d");
     window.myLine = new Chart(ctx).Line(lineChartData, {
