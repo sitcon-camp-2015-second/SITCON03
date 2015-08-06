@@ -7,11 +7,14 @@
 function logout(){FB.logout(function(response){response.authResponse.accessToken});
 setTimeout(function(){
 	FB.getLoginStatus(function(response){
-		if (response.status !== 'connected'){window.location = './index.html'}});},2000);}
+		if (response.status !== 'connected'){
+			window.location = './index.html'}});},2000);}
 function checkstatus(){
 setTimeout(function(){
         FB.getLoginStatus(function(response){
-                if (response.status !== 'connected'){window.location = './index.html'}});},2000);}
+                if (response.status !== 'connected'){
+                	alert("讓我們帶你回首頁吧～");
+                	window.location = './index.html';}});},2000);}
 
 </script>
 <script type="text/javascript">
