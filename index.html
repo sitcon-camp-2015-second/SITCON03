@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="./css/materialize.min.css">
         <!-- Compiled and minified JavaScript -->
         <script src="./js/materialize.min.js"></script>
+	<!--Chart code, need to decide whether to remove it or not-->
         <script src="./js/chart.js"></script>
+	<!--jQuery support-->
         <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
         <style type="text/css">
 
@@ -36,9 +38,19 @@
             }
 
         </style>
+	<!--check login, if true redirect-->
+	<script type="text/javascript">
+	function loginredirect(){
+		checkLoginState();
+		FB.getLoginStatus(function(response){
+			if (response.status === 'connected'){
+				window.location = './Hackathon/web.html'
+			};});}
+	</script>
     </head>
     
     <body>
+	<!--Facebook api-->
         <script src="./fbapi.js" type="text/javascript"></script>
 	
         <nav role="navigation"><div id="facebookblue">
@@ -54,7 +66,7 @@
     <div class="section">
 	<h3>請先登入以繼續</h3>
       <canvas id="canvas"></canvas>
-      <fb:login-button data-size="xlarge" scope="public_profile,user_posts" onlogin="checkLoginState();FB.getLoginStatus(function(response){if (response.status === 'connected') { window.location = './Hackathon/web.html' };});"><div id="status"></div>
+      <fb:login-button data-size="xlarge" scope="public_profile,user_posts" onlogin="loginredirect();"><div id="status"></div>
 
       <!--<div class="row">
         <div class="col s12 center">-->
