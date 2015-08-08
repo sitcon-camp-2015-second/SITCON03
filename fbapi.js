@@ -1,3 +1,4 @@
+// Nothing should be edited in this file
 // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');

@@ -1,3 +1,6 @@
+//Grab from https://github.com/sitcon-tw/summercamp-api-sdk
+//License: not declared, assume MIT or GPL
+//used for reference 
 (function(w, $, f){
   var facebook = function($, f) {
     this.hello = "Welcome to SITCON Summer Camp!"
