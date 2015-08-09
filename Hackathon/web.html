@@ -45,11 +45,10 @@ setTimeout(function(){
                         window.location = '../index.html'}});},2000);}
 function checkstatus(){
 setTimeout(function(){
-        $('body').append('<img src="Processing.gif"></img>');
         FB.getLoginStatus(function(response){
                 if (response.status !== 'connected'){
                         
-                        window.location = '../index.html';}});},0);}
+                        window.location = '../index.html';}});},10);}
 
 </script>
     </head>
