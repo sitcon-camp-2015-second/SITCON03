@@ -1,10 +1,10 @@
 //Grab from https://github.com/sitcon-tw/summercamp-api-sdk
 //License: not declared, assume MIT or GPL
-//used for reference 
+//used for reference
 (function(w, $, f){
   var facebook = function($, f) {
     this.hello = "Welcome to SITCON Summer Camp!"
-    var accessToken = "CAACEdEose0cBAMbKjVSjR3KtLpRhtzCrsnZAs13USeMum1qlOXNoZCskDVcggykebeik7pzf6dbjOoBo5ZBJCrZBfDijcKpB3SXvKc9h0woOcLUs6ZA56fV1EseZAYUXsZC8nU0K4mvJgwQisGCCBxhD1SXO78NQ2ZBXMKDJ6Uy0xpUaUFAy7k72azDRoMpaCM6aFoEJbESlb8PqmUOUJSMuJuAPWINkIXqetu7LLDi4WAZDZD"
+    var accessToken = "CAACEdEose0cBAOtdbBMJVIO5sLlCL0hHAlakKUOV1fZBQBnUZCZAznbmmD6KLW904EvZB9pRHDXRGME4VwvpwNndlhTP2rdzb8dP5aBbm4RmmbsFGUguPTZBsMfnZBCKdyAojl1azUskfItx9muGPb9Ae08PrVKv9gaclIh4CqEvcRnH33jy6a2InF1Y7SYvBnRZA6OSawdNPxQuZAYobFYfdMNmlrGnOhEZD"
     var fansPage = f
     var basicInfo = {}
     this.getAccessToken = function() {
@@ -28,6 +28,7 @@
       $.get("https://graph.facebook.com/"+path+"?access_token="+accessToken + variables, function (data){
         callback && callback(data)
       })
+      console.log("https://graph.facebook.com/"+path+"?access_token="+accessToken + variables);
     }
     this.getPosts = function(id, callback) {
       this.api(id+"/posts", callback)
