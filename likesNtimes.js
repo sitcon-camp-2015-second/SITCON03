@@ -75,7 +75,7 @@ var getAllthings = function(new_accessToken){
       };
     });
 };
-var getAllthings_v2 = function(new_accessToken){
+var getAllthings_v2 = function(new_accessToken, Blimit){
   var posts = [];
   var times = [];
   var likes = [];
@@ -235,7 +235,7 @@ var getAllthings_v2 = function(new_accessToken){
               });
             };
           }
-          while( flag && posts.length < 1000);
+          while( flag && posts.length < Blimit);
         };
         result = arrangement(likes, posts, times);
         console.log(result.likes_count);
@@ -245,7 +245,9 @@ var getAllthings_v2 = function(new_accessToken){
         //console.log(posts);
         //console.log(times);
         //console.log(likes);
+        console.log(result);
         console.log("------");
+        return result;
     });
 
   };
