@@ -1,6 +1,5 @@
-Up site: comeonplay.net<br />
+Up site: http://2015-2.sitcon.camp/SITCON03<br />
 TODO: <br />
-1. Domain and server expiring, moving in the future.
-2. File cleanup
-3. License declaration
-4. Real world usable
+1. File cleanup
+2. License declaration
+3. Real world usable
